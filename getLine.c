@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * input_buf - buffers chained commands
+ * input_buf - Function that buffers chained commands
  * @info: parameter struct
  * @buf: address of buffer
  * @len: address of len var
@@ -13,7 +13,7 @@ ssize_t input_buf(info_t *info, char **buf, size_t *len)
 	ssize_t r = 0;
 	size_t len_p = 0;
 
-	if (!*len) /* if nothing left in the buffer, fill it */
+	if (!*len) /* if the buffer has nothing left, fill it */
 	{
 		/*bfree((void **)info->cmd_buf);*/
 		free(*buf);
